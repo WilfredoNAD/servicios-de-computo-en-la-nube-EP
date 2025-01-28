@@ -127,13 +127,52 @@ excelentes opciones para bases de datos pequeñas y medianas, servicios web de t
 Esta es una mucha mejor opcion que la t2.micro, ya que maneja la ultima generacion de intel y el rendimiento de la misma aumenta
 asi que puede usarse de en una escala mucho mayor que la anterior y con una buena relacion precio/rendimiento
 
-c5n
+**c5.large:** están optimizadas para cargas de trabajo con uso intensivo de computación y ofrecen un alto rendimiento de manera rentable con una buena relación entre capacidad de computación y precio. ya este es un nivel mayor de instancia la cual soporta grandes cantidades de carga de trabajo.
 
 
-8. Activación de Funciones Serverless: ¿Cómo se activa una función serverless? Explica los diferentes tipos de triggers o eventos que pueden iniciar la ejecución de una función.
+6. Activación de Funciones Serverless: ¿Cómo se activa una función serverless? Explica los diferentes tipos de triggers o eventos que pueden iniciar la ejecución de una función.
 
-    [Tu respuesta aquí]
+Activar una función serverless significa iniciar la ejecución de un fragmento de código en respuesta a un evento específico.
+
+Para que se ejecuten estos fragmentos de codigo es necesario una accion o evento y esa son los triggers. Los triggers son el corazón de las funciones serverless, permitiendo que estas se ejecuten de manera reactiva en respuesta a eventos específicos. Al comprender los diferentes tipos de triggers y cómo configurarlos, podrás construir aplicaciones serverless altamente escalables y eficientes.
+
+La configuración de los triggers varía según la plataforma serverless que estés utilizando (AWS Lambda, Google Cloud Functions, Azure Functions, etc.). Generalmente, se realiza a través de una consola de administración o mediante la definición de recursos en un archivo de configuración (como un archivo YAML o JSON)
+
+En cuanto a los tipo de triggers o eventos mencionaremos algunos:
+
+-Peticiones HTTP: La función se activa cuando recibe una solicitud HTTP, ya sea un GET, POST, PUT, DELETE o cualquier otro método HTTP.
+
+-Eventos de base de datos: Al realizar operaciones en una base de datos (inserción, actualización, eliminación), se pueden generar eventos que activan funciones.
+
+-Eventos de mensajería: Servicios de mensajería como SNS (Simple Notification Service) o SQS (Simple Queue Service) permiten enviar mensajes que desencadenan funciones.
+
+-Eventos de programación: Puedes programar una función para que se ejecute en intervalos regulares (cron jobs) o en momentos específicos.
+
 
 9. Herramientas de Despliegue: Investiga al menos 2 herramientas que se utilizan para desplegar aplicaciones en la nube (ej. AWS Elastic Beanstalk, Azure DevOps, Google Cloud Build). Describe brevemente sus funciones.
 
-    [Tu respuesta aquí]
+**AWS Elastic Beanstalk:**
+ es un servicio que se usa para implementar y escalar aplicaciones y servicios web. Cargue el código y Elastic Beanstalk administrará de manera automática la implementación, desde el aprovisionamiento de la capacidad, el equilibrio de carga y el escalado automático hasta la supervisión del estado de la aplicación.
+
+entre sus funciones destacamos:
+
+-Automatizacion del despliegue: Subes tu código y Elastic Beanstalk se encarga de todo el proceso de despliegue en la nube de AWS.
+-Provisiona los recursos necesarios: Crea y configura automáticamente los recursos necesarios para ejecutar tu aplicación, como instancias EC2, balanceadores de carga y grupos de autoescalado.
+-Gestiona la escalabilidad: Ajusta automáticamente la capacidad de tu aplicación para hacer frente a las variaciones de carga.
+-Supervisa el estado de la aplicación: Te proporciona herramientas para monitorear el rendimiento y la salud de tu aplicación.
+-Soporta múltiples lenguajes: Es compatible con una amplia variedad de lenguajes de programación, como Java, .NET, Python, Ruby, Node.js, PHP, Go y más.
+
+**Google Cloud Build:**
+
+Google Cloud Build es una plataforma de CI/CD (Integración Continua y Entrega Continua) que te permite automatizar el proceso de construcción de software en Google Cloud.
+
+Entre sus funciones estan:
+
+-Automatiza la compilación: Define una configuración de compilación (build config) que especifica los pasos necesarios para construir tu aplicación, como descargar dependencias, compilar el código y crear contenedores Docker.
+-Integración continua: Se integra con sistemas de control de versiones como GitHub, GitLab o Bitbucket para automatizar las compilaciones cada vez que se produce un cambio en el código.
+-Pruebas: Puedes ejecutar pruebas unitarias, de integración y otras pruebas automatizadas como parte del proceso de compilación.
+-Creación de imágenes de contenedor: Genera imágenes de contenedor Docker que pueden ser desplegadas en diferentes entornos.
+-Despliegue: Puede desplegar directamente a diferentes entornos como Cloud Run, Kubernetes Engine, App Engine, etc.
+-Escalabilidad: Puede manejar múltiples compilaciones en paralelo y escalar automáticamente para adaptarse a las necesidades de tu proyecto.
+
+
